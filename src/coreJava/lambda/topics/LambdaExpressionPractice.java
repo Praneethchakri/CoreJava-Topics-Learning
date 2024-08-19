@@ -25,6 +25,18 @@ public class LambdaExpressionPractice {
 		};
 		
 		System.out.println(stringReverse.reverseString("Praneeth"));
+		
+		
+		FunctionalInterfaceFactorial numberFactorial = (number)->{
+			long factorial = 1;
+			
+			for(int i=1;i<=number;i++) {
+				factorial = factorial*i;
+			}
+			return factorial;
+		};
+		
+		System.out.println("Factorial Of "+numberFactorial.factorial(5));
 
 	}
 
@@ -47,4 +59,15 @@ public class LambdaExpressionPractice {
 		}
 		return reversString;
 	}
+	
+	public long factorialMethod(int number ) {
+		long factorial = 1;
+		
+		for(int i=1;i<=number;i++) {
+			factorial = factorial*i;
+		}
+		return factorial;
+		
+	}
+	
 }
