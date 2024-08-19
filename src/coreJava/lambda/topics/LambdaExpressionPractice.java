@@ -1,6 +1,7 @@
 package coreJava.lambda.topics;
 
 public class LambdaExpressionPractice {
+	//Lambda Expression Practice Basic
 	public static void main(String[] args) {
 
 		FunctionInterface1 obj1 = () -> System.out.println("checking functional Interface Method ");
@@ -62,9 +63,6 @@ public class LambdaExpressionPractice {
 	
 	public long factorialMethod(int number ) {
 		long factorial = 1;
-		
-		
-		
 		for(int i=1;i<=number;i++) {
 			factorial = factorial*i;
 		}
