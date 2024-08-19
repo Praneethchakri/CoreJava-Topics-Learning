@@ -63,6 +63,8 @@ public class LambdaExpressionPractice {
 	public long factorialMethod(int number ) {
 		long factorial = 1;
 		
+		
+		
 		for(int i=1;i<=number;i++) {
 			factorial = factorial*i;
 		}
