@@ -34,9 +34,6 @@ public class LambdaExpressionPractice {
 			for(int i=1;i<=number;i++) {
 				factorial = factorial*i;
 			}
-
-			
-//			TEsting
 			return factorial;
 		};
 		
