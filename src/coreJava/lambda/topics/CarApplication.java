@@ -2,6 +2,8 @@ package coreJava.lambda.topics;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class CarApplication {
 	public static void main(String[] args) {
@@ -13,15 +15,23 @@ public class CarApplication {
 				new Car("Jeep", "Wrangler", "Red", 24500));
 
 //		printCarByPriceRange(cars, 10000, 17000);
-
-		printCars(cars, (c) -> c.getPrice() >= 14000 && c.getPrice() <= 20000);
-
-		System.out.println("\n");
-
-		printCars(cars, (c) -> c.getColour().equalsIgnoreCase("Blue"));
+//
+//		printCars(cars, (c) -> c.getPrice() >= 14000 && c.getPrice() <= 20000);
+//
+//		System.out.println("\n");
+//
+//		printCars(cars, (c) -> c.getColour().equalsIgnoreCase("Blue"));
+		
+		
+		Function<Car,String> priceAndColor = car -> car.getPrice() +" "+car.getColour();
+		
+		
+		
+				
 	}
+	
 
-	public static void printCars(List<Car> car, Condition<Car> condition) {
+	public static void printCars(List<Car> car, Predicate<Car> condition) {
 		for (Car car2 : car) {
 			if (condition.test(car2)) {
 				car2.printCar();
