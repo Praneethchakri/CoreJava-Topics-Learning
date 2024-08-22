@@ -18,14 +18,15 @@ public class FileStreamData {
 		lines.close();
 
 		Stream<String> rows = Files.lines(Paths.get("files/stockDataCsv.txt"));
-			rows.map(x->x.split(","))
-			.forEach(System.out::println);
+//			rows.map(x->x.split(","))
+//			.forEach(System.out::println);
 		
 		int count = (int) rows.map(x->x.split(","))
 		.filter(y->y.length>3)
 		.count();
-		rows.close();
 		System.out.println(count);
+		rows.close();
+		
 
 	}
 }
