@@ -10,7 +10,6 @@ public class TryCatchFinallyImpl {
 
 	public static void main(String[] args) {
 		Stream<String> lines = null;
-
 		try {
 			lines = Files.lines(Paths.get("files/wordFile1.txt"));
 		} catch (FileNotFoundException e) {
