@@ -66,6 +66,7 @@ class Person implements Cloneable {
 		p.address = (Address) address.clone();
 		p.address.income = (Income) address.income.clone();
 		return p;
+		
 	}
 
 	@Override
