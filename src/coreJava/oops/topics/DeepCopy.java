@@ -1,5 +1,9 @@
 package coreJava.oops.topics;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
 class Income implements Cloneable {
 	int salary;
 	String company;
@@ -20,6 +24,9 @@ class Income implements Cloneable {
 	public String toString() {
 		return "Income [salary=" + salary + ", company=" + company + "]";
 	}
+	
+	
+	Map<String,String> hashMap = Collections.synchronizedMap(new HashMap<>());
 
 }
 
