@@ -22,8 +22,8 @@ public class Constructor_Details {
 		Constructor<?>[] defaultConstrucotrs = Person.class.getDeclaredConstructors();
 		System.out.println(defaultConstrucotrs.toString());
 //		printConstructorData(Person.class);
-		Address a = (Address) createInstanceWithArguments(Address.class, "Bangalore","India");
-		Person p = (Person) createInstanceWithArguments(Person.class,33,"Praneeth",a);
+		Address a =  createInstanceWithArguments(Address.class, "Bangalore","India");
+		Person p =  createInstanceWithArguments(Person.class,33,"Praneeth",a);
 		System.out.println(p);
 
 	}
@@ -47,12 +47,12 @@ public class Constructor_Details {
 
 	// Dynamic Object Creation using Reflection
 
-	public static Object createInstanceWithArguments(Class<?> clazz, Object... args)
+	public static <T> T createInstanceWithArguments(Class<T> clazz, Object... args)
 			throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 
 		for (Constructor<?> constructor : clazz.getDeclaredConstructors()) {
 			if (constructor.getParameterTypes().length == args.length) {
-				return constructor.newInstance(args);
+				return (T) constructor.newInstance(args);
 			}
 		}
 		System.out.println("An appropriate Constructor Not Found!!!");
@@ -93,6 +93,13 @@ public class Constructor_Details {
 	public static class Address {
 		private String location;
 		private String country;
+		
+		
+
+		public Address(String location, String country) {
+			this.location = location;
+			this.country = country;
+		}
 
 		public String getLocation() {
 			return location;
