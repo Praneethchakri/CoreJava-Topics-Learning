@@ -1,4 +1,4 @@
-package functionalInterface.programs;
+package coreJava.lambda.topics.predicate;
 
 import java.util.function.Predicate;
 

@@ -1,7 +1,10 @@
-package functionalInterface.programs;
+package coreJava.lambda.topics.predicate;
 
 import java.util.List;
 import java.util.function.Predicate;
+
+import coreJava.lambda.topics.consumer.Student;
+import coreJava.lambda.topics.consumer.StudentData;
 
 public class PredicateWithObject {
 

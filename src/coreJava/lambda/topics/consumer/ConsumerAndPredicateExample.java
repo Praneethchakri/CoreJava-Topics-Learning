@@ -1,4 +1,4 @@
-package functionalInterface.programs;
+package coreJava.lambda.topics.consumer;
 
 import java.util.List;
 import java.util.function.BiConsumer;
