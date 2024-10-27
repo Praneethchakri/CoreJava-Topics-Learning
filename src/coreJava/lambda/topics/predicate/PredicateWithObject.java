@@ -8,7 +8,7 @@ import coreJava.lambda.topics.consumer.StudentData;
 
 public class PredicateWithObject {
 
-	static Predicate<Student> p1 = (s) -> s.getGrade() <= 61.0;
+	public static Predicate<Student> p1 = (s) -> s.getGrade() <= 61.0;
 	static Predicate<Student> p2 = (s1) -> s1.getGcp() < 2;
 
 	public static void getStudentList() {
