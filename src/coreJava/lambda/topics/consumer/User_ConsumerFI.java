@@ -45,10 +45,17 @@ public class User_ConsumerFI {
 		users.add(new User_ConsumerFI("Praneeth"));
 		users.add(new User_ConsumerFI("Sarvani"));
 		System.out.println("Before Status Update ::");
+		users.forEach(System.out::println);
 		Consumer<User_ConsumerFI> userConsumer = user -> user.updateStatus(user.getStatus());
+		;
+			
+		Consumer<User_ConsumerFI> userConsumerData = user->System.out.println("Data "+user.userName);
 		System.out.println("After Status Update ::");
 		users.forEach(userConsumer);
 		users.forEach(System.out::println);
+		
+		System.out.println("Printing UserStatus and UserName ");
+		users.forEach(user -> userConsumer.andThen(userConsumerData).accept(user));
 	}
 
 }
