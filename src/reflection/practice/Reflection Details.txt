@@ -1,0 +1,115 @@
+Reflection API In Java
+
+Methods to Get the Constructor<?> Objects
+
+Class.getDeclaredConstructors()
+	• Returns all declared constructors within the class
+	• Includes all the public and non public constructors
+Class.getConstructor()
+	• Returns only the public Constructors  within the class
+
+If we know the particular types of parameters in constructor we call
+
+Class.getDeclaredConstructor(Class<?>  … parameterTypes)
+
+		Or
+Class.getConstructor(Class<?> … parameterTypes);
+
+Based on the above ways of calling a consturctor we will give the results as below
+
+Returns a particualr constructor which matches the syntax we provide .i.e
+	• Returns a constructor based on the parameter types.
+	• Else throws NoSuchMethodException if no matching constructor found
+	
+
+
+
+12 May 2024
+19:22
+
+Reflection is an Api , which will be used to examin or modify the behaviour of a class or a method or interface at runtime.
+
+
+The required classes for reflection are provided under the package java.lang.reflect.
+
+Reflection usecase
+Reflection provides the information about the class to which an object belongs to and also the methods of that class that can be executed by using the object
+
+Through reflection api we can invoke a method at runtime irrespective of which specifier/Modifiers(Private, public ,Default,protected) used with them.
+
+
+
+What is Java Reflection
+	• Java Reflection is a powerful language part of  JVM feature that gives us the RUN Time access to the information about our application  classes and objects
+	• Those features are available to us though reflection API
+What we can do with Java Reflection?
+	• Using Reflection API we can write flexible code that links different software components together at runtime.
+	• Creates new program flow without any source code modifications.
+	• Reflection allow writing general purpose algorithms that dynamically adapt and changes their behavior based on the type of objects or classes they are working on.
+The major ability of Java Reflection API's  , to analyze the applications Object and classes at runtime
+	With this feature we can create 
+		○ Libraries
+		○ Frameworks
+		○ Software designs
+
+
+Reflection use Case and Examples
+1.Junit- Standard Framework for unit testing of java applications
+	Eg: Without Reflection we need to manually     
+	 create the object to test with mock data                            
+	Public class CarTest {
+		Public void setUp(){}
+		Public void testDrive(){}
+		Public void testBrake(){}
+	
+	Main(){
+	
+	CarTest obj = CarTest();
+		Obj.setUp();
+		Obj.testDrive();
+		Obj.setUp();
+		Obj.testBrake();
+}
+
+With Reflection we can avoid the boiler plate code that create of object and other
+
+Public class CarTest{
+	@Before
+	Public void setUp(){}
+	@Test
+	Public void testDrive(){}
+	@Test
+	Public void testBrake(){}
+	}
+
+/*
+Main(){
+
+CarTest obj = CarTest();
+	Obj.setUp();
+	Obj.testDrive();
+	Obj.setUp();
+	Obj.testBrake();
+	*/
+}
+
+	2. Dependency Injection
+		a. Spring/Spring Boot
+		b. Google Guice
+	3. Json Serialization and Deserialization
+		a. Jackson
+		b. Gson
+	4. Other Popular use cases include
+		a. Logging Frameworks
+		b. ORM(Object Relational Mapping tools)
+		c. Web Frameworks
+		d. Developer tools
+	5. Architecting our own applications
+	
+Java Reflection challenges
+	1. If we use incorrectly ,not for the right purpose
+	2.  it will make our code slow and hard to maintain
+	3. Dangerous to execute, could crash unrecoverable
+
+
+Introduction of Reflection Entry point Class<?>
