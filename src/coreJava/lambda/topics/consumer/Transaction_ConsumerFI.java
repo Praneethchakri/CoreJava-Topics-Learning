@@ -1,4 +1,4 @@
-package functionalInterface.programs;
+package coreJava.lambda.topics.consumer;
 
 import java.util.ArrayList;
 import java.util.List;

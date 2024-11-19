@@ -1,7 +1,5 @@
 package coreJava.lambda.topics.consumer;
 
-import coreJava.lambda.topics.consumer.Student;
-
 import java.util.ArrayList;
 import java.util.List;
 
