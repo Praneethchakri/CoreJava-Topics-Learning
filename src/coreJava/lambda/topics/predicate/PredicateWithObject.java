@@ -1,4 +1,7 @@
-package functionalInterface.programs;
+package coreJava.lambda.topics.predicate;
+
+import coreJava.lambda.topics.consumer.Student;
+import coreJava.lambda.topics.consumer.StudentData;
 
 import java.util.List;
 import java.util.function.Predicate;

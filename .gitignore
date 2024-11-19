@@ -1,3 +1,7 @@
 /.classpath
 /bin
 /bin/.class
+.class
+*.class
+.idea/.*
+classes
