@@ -8,6 +8,7 @@ import java.util.Random;
 public class VaultProgram {
 private static final int MAX_NUMBER = 9999;
 
+
     public static void main(String[] args) {
         Random random = new Random();
         Vault v = new Vault(random.nextInt(MAX_NUMBER));
