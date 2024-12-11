@@ -9,8 +9,10 @@ public class Student {
 	private double grade;
 	private short gcp;
 	private List<String> activities;
+	private List<String> subjects;
+	private List<Integer> rollNumbers;
 
-	public Student(int id, String name, String address, double grade, short gcp, List<String> activities) {
+	public Student(int id, String name, String address, double grade, short gcp, List<String> activities,List<String> subjects,List<Integer> rollNumbers) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -18,6 +20,8 @@ public class Student {
 		this.grade = grade;
 		this.gcp = gcp;
 		this.activities = activities;
+		this.subjects=subjects;
+		this.rollNumbers=rollNumbers;
 	}
 
 	public int getId() {
@@ -68,10 +72,33 @@ public class Student {
 		this.activities = activities;
 	}
 
-	@Override
-	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", address=" + address + ", grade=" + grade + ", gcp=" + gcp
-				+ ", activities=" + activities + "]";
+	public List<String> getSubjects() {
+		return subjects;
 	}
 
+	public void setSubjects(List<String> subjects) {
+		this.subjects = subjects;
+	}
+
+	public List<Integer> getRollNumbers() {
+		return rollNumbers;
+	}
+
+	public void setRollNumbers(List<Integer> rollNumbers) {
+		this.rollNumbers = rollNumbers;
+	}
+
+	@Override
+	public String toString() {
+		return "Student{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", address='" + address + '\'' +
+				", grade=" + grade +
+				", gcp=" + gcp +
+				", activities=" + activities +
+				", subjects=" + subjects +
+				", rollNumbers=" + rollNumbers +
+				'}';
+	}
 }

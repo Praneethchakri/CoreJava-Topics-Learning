@@ -13,6 +13,7 @@ public class StreamApiExample1 {
     public static void main(String[] args) {
 
         Predicate<Student> filterByGrade = (student -> student.getGrade()>=3);
+
         Predicate<Student> filterByAddress = (
                 student -> {
             return student.getAddress().equalsIgnoreCase("Bangalore");
