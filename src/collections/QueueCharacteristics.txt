@@ -1,0 +1,5 @@
+
+Key Characteristics of Queues:
+- FIFO Ordering: The first element added is the first element removed.
+- Capacity Restrictions: Some queue implementations may have a fixed capacity, while others are dynamically resizable.
+- Specialized Subtypes: Includes `Deque` for double-ended queues, and `BlockingQueue` for thread-safe queues with blocking operations.

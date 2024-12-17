@@ -1,7 +1,7 @@
 Iterable (I)
-Collection(I)
+Collection(I) && Collections(C) Utility Class
 
-Collections(C) Utility Class
+
 
     List(I)
         ArrayList(C)
