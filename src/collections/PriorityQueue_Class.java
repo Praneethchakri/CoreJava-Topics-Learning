@@ -9,8 +9,15 @@ public class PriorityQueue_Class {
         System.out.println("Priorty Queue feature: \n" +
                 "1. Grows Dynamically \n" +
                 "2. Follow Natual Sorting order while polling  the elements \n" +
-                "3.As Not Synchronised, not suitable for Concurrent environement and functionalites, \n" +
+                "3.As Not Synchronised/Not Thread Safe, not suitable for Concurrent environement and functionalites, \n" +
                 "    To use it need make externally synchornized. use of Synchronized key word");
+
+        System.out.println("add()--to Add \n" +
+                "remove() -- to remove \n" +
+                "element() -- to get");
+        System.out.println("offer() -- to Add \n" +
+                "poll() -- to remove\n" +
+                "peek() -- to get/read");
         Queue<String> stringQueue = new PriorityQueue<>();
             stringQueue.offer("Praneeth");
             stringQueue.offer("Sushma");
